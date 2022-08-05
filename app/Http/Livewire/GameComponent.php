@@ -14,9 +14,6 @@ class GameComponent extends Component
     public $team1Belote= false;
     public $team2Belote= false;
 
-    public $team1der= false;
-    public $team2der= false;
-
     public $team2prise =false;
     public $team1prise =true;
 
@@ -51,9 +48,6 @@ class GameComponent extends Component
         $this->team1Belote= false;
         $this->team2Belote= false;
 
-        $this->team1der= false;
-        $this->team2der= false;
-
         $this->team2prise =false;
         $this->team1prise =true;
 
@@ -77,7 +71,7 @@ class GameComponent extends Component
                 ['equipe1' => $this->team1NewDonne, 
                 'equipe2' => $this->team2NewDonne,
                 'game_id' => $this->gameId,
-                '10der' => $this->team1der,
+                '10der' => false,
                 'beloteEtRe' => $this->team1Belote,
                 'capot' => $this->team1capot,
                 'prise' => 'team1']
@@ -89,12 +83,6 @@ class GameComponent extends Component
 
         if($this->team1prise){
             if($this->checkIfgoodWin($this->team1NewDonne,$this->team1Belote,$this->team2Belote)){
-                if($this->team1der){
-                    $this->team1NewDonne = (int)$this->team1NewDonne + 10;
-                }
-                if($this->team2der){
-                    $this->team2NewDonne = (int)$this->team2NewDonne + 10;
-                }
                 if($this->team1Belote){
                     $this->team1NewDonne = (int)$this->team1NewDonne + 20;
                 }
@@ -106,7 +94,7 @@ class GameComponent extends Component
                     ['equipe1' => $this->team1NewDonne, 
                     'equipe2' => $this->team2NewDonne,
                     'game_id' => $this->gameId,
-                    '10der' => $this->team1der,
+                    '10der' => false,
                     'beloteEtRe' => $this->team1Belote,
                     'capot' => $this->team1capot,
                     'prise' => 'team1']
@@ -121,7 +109,7 @@ class GameComponent extends Component
                     ['equipe1' => $this->team1NewDonne, 
                     'equipe2' => 162,
                     'game_id' => $this->gameId,
-                    '10der' => $this->team1der,
+                    '10der' => false,
                     'beloteEtRe' => $this->team1Belote,
                     'capot' => $this->team1capot,
                     'prise' => 'team1']
@@ -131,12 +119,6 @@ class GameComponent extends Component
                 
         }else{
             if($this->checkIfgoodWin($this->team2NewDonne,$this->team2Belote,$this->team1Belote)){
-                if($this->team2der){
-                    $this->team2NewDonne = (int)$this->team2NewDonne + 10;
-                }
-                if($this->team1der){
-                    $this->team1NewDonne = (int)$this->team1NewDonne + 10;
-                }
                 if($this->team2Belote){
                     $this->team2NewDonne = (int)$this->team2NewDonne + 20;
                 }
@@ -147,7 +129,7 @@ class GameComponent extends Component
                     ['equipe1' => $this->team1NewDonne, 
                     'equipe2' => $this->team2NewDonne,
                     'game_id' => $this->gameId,
-                    '10der' => $this->team2der,
+                    '10der' => false,
                     'beloteEtRe' => $this->team2Belote,
                     'capot' => $this->team2capot,
                     'prise' => 'team2']
@@ -164,7 +146,7 @@ class GameComponent extends Component
                     ['equipe1' => 162, 
                     'equipe2' => $this->team2NewDonne,
                     'game_id' => $this->gameId,
-                    '10der' => $this->team2der,
+                    '10der' => false,
                     'beloteEtRe' => $this->team2Belote,
                     'capot' => $this->team2capot,
                     'prise' => 'team2']

@@ -32,10 +32,6 @@
                 <label for="default-checkbox" class="ml-2 text-sm font-medium dark:text-gray-300">Belote et ReBelote</label>
             </div>
             <div class="flex items-center">
-                <input id="default-checkbox" type="checkbox" wire:model="team1der" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                <label for="default-checkbox" class="ml-2 text-sm font-medium dark:text-gray-300">10 de der</label>
-            </div>
-            <div class="flex items-center">
                 <input id="default-checkbox" type="checkbox" wire:click="capot(1)" wire:model="team1capot" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                 <label for="default-checkbox" class="ml-2 text-sm font-medium dark:text-gray-300">Capot</label>
             </div>
@@ -51,10 +47,6 @@
             <div class="flex items-center">
                 <input id="default-checkbox" type="checkbox" wire:click="beloteetre(2)"  wire:model="team2Belote" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                 <label for="default-checkbox" class="ml-2 text-sm font-medium dark:text-gray-300">Belote et ReBelote</label>
-            </div>
-            <div class="flex items-center">
-                <input id="default-checkbox" type="checkbox" wire:model="team2der" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                <label for="default-checkbox" class="ml-2 text-sm font-medium dark:text-gray-300">10 de der</label>
             </div>
             <div class="flex items-center">
                 <input id="default-checkbox" type="checkbox" wire:click="capot(2)" wire:model="team2capot" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
