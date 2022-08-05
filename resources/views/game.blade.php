@@ -14,7 +14,7 @@
 
     <div class=" pl-8 py-4 md:py-8 h-full px-4 md:px-0">
 
-        <livewire:create-game />
+        <livewire:game-component :gameId='$id'/>
 
     </div>
 

@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class GameController extends Controller
 {
 
-    public function index()
+
+    public function index($id)
     {
-        return view('dashboard');
+        return view('game',['id' => $id]);
     }
     /**
      * Handle the incoming request.
@@ -19,6 +20,6 @@ class DashboardController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('dashboard');
+        //
     }
 }

@@ -21,55 +21,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth')->group(function () {
 
-    Route::prefix('account')->group(function () {
-        Route::get('/', [\App\Http\Controllers\AccountController::class, 'index'])->name('account.index');
-    });
 
-    Route::get('/', [\App\Http\Controllers\DashboardController::class, 'index'])
-    ->name('dashboard');
-    Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])
-    ->name('dashboard');
-    Route::get('/add', [\App\Http\Controllers\AddController::class, 'index'])
-    ->name('add');
-    Route::get('/multipleSearch', [\App\Http\Controllers\MultipleSearchController::class, 'index'])
-    ->name('multipleSearch');
-    Route::get('/multipleAdd', [\App\Http\Controllers\MultipleAddController::class, 'index'])
-    ->name('multipleAdd');
-    
-});
+Route::view('/', 'dashboard')->name('index');
+Route::view('dashboard', 'dashboard')->name('index');
 
-//Route::view('/', 'welcome')->name('home');
+Route::get('/game/{id}', [\App\Http\Controllers\GameController::class, 'index'])->name('game');
 
-Route::middleware('guest')->group(function () {
-    Route::get('login', Login::class)
-        ->name('login');
 
-    Route::get('register', Register::class)
-        ->name('register');
-});
 
-Route::get('password/reset', Email::class)
-    ->name('password.request');
-
-Route::get('password/reset/{token}', Reset::class)
-    ->name('password.reset');
-
-Route::middleware('auth')->group(function () {
-    Route::get('email/verify', Verify::class)
-        ->middleware('throttle:6,1')
-        ->name('verification.notice');
-
-    Route::get('password/confirm', Confirm::class)
-        ->name('password.confirm');
-});
-
-Route::middleware('auth')->group(function () {
-    Route::get('email/verify/{id}/{hash}', EmailVerificationController::class)
-        ->middleware('signed')
-        ->name('verification.verify');
-
-    Route::post('logout', LogoutController::class)
-        ->name('logout');
-});
