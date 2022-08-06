@@ -65,7 +65,7 @@ class GameComponent extends Component
     }
 
     public function deleteLast(){
-        DB::table('donne')->orderBy('id', 'desc')->take(1)->delete();
+        DB::table('donne')->where('id',$this->gameId)->orderBy('id', 'desc')->take(1)->delete();
     }
 
     public function nouvelleDonne(){
