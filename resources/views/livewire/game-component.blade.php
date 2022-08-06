@@ -55,10 +55,14 @@
         </div>
     </div>
     <div class="w-full grid place-items-center mt-8">
-        <button wire:click="nouvelleDonne" type="button" class="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Nouvelle donne</button>
-    </div>
-
-    <div class="w-full grid place-items-center mt-8">
-        <button wire:click="newGame" type="button" class="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Nouvelle game</button>
+            <button wire:click="nouvelleDonne" type="button" class="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Nouvelle donne</button>
+    </div> 
+    <div  class="flex felx-col">
+        <div class="w-full grid place-items-center mt-8">
+            <button wire:click="deleteLast" type="button" class="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Supprimer dernière</button>
+        </div> 
+        <div class="w-full grid place-items-center mt-8">
+            <button wire:click="newGame" type="button" class="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Nouvelle game</button>
+        </div>
     </div>
 </div>

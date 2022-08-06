@@ -64,6 +64,10 @@ class GameComponent extends Component
         return redirect()->route('index');
     }
 
+    public function deleteLast(){
+        DB::table('donne')->orderBy('id', 'desc')->take(1)->delete();
+    }
+
     public function nouvelleDonne(){
 
         if($this->team1capot || $this->team2capot){
